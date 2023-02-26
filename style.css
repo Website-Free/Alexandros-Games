@@ -1,0 +1,112 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Menu Skewed header */
+.skewed {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: rgb(255, 88, 88);
+  box-shadow: inset 2px 2px 5px rgb(255 255 255 / 15%), inset -2px -2px 5px rgb(0 0 0);
+
+}
+.skewed .header {
+  background-color: rgb(78, 173, 241);
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height:100%;
+  width: 100;
+  background-repeat: no-repeat;
+  background-size:100%;
+  transform: skewY(-6deg);
+  transform-origin:top left;
+  filter: brightness(50%);
+  box-shadow: inset 2px 0px 3px rgb(255 255 255 / 15%), inset -2px 0px 3px rgb(0 0 0);
+}
+
+.skewed> .skewed-header-wrapper {
+position: absolute;
+display: flex;
+justify-content: center;
+width: 100vw;
+}
+
+.skewed> .skewed-header-wrapper >.skewed-header-content {
+  width: 1000px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+}
+
+.skewed> .skewed-header-wrapper > .skewed-header-content > .heading-wrapper {
+  background-color:rgb(255, 214, 161);
+  color: black;
+  padding: 5px;
+  text-align: center;    
+  border-radius: 20px;
+  border: 3px solid;
+  padding: 10px;
+  box-shadow: 5px 5px rgb(203, 209, 7);
+}
+
+.container {  
+  font-family: 'Modern Antiqua', cursive;
+  color:purple;
+  background-color: antiquewhite;
+  text-align: center;
+  display: grid;
+  padding: 30px;
+  grid-template-columns: 50% 50%;
+  }
+  .galerie h3 a {
+    text-decoration: none;
+      color:red;
+      font-size: 20px;
+  }
+.container img {width:15rem; height: 15rem; border-radius: 50%;
+      border:solid black;
+}
+
+.galerie:hover {
+      transform: scale(1.04);
+      transition: all 1s ease;
+      filter: grayscale(0);
+  }
+
+/* copy bottom */
+.footer {
+  background-color: purple;
+  height: 20px;
+  display: flex;
+  justify-content:center;
+  align-items:center ;
+  font-size: 12px;
+  border-radius: 10px;
+}
+.footer a {   
+text-decoration: none;
+transition: 1.5s;
+color: aliceblue;
+}
+
+.footer a:hover {  
+  color:yellow;
+  letter-spacing: 1px;
+}
+
+@media(max-width:570px) {
+  .container {
+    display: grid !important;
+    justify-content: center;
+    grid-template-columns: 1fr !important;
+    height: auto;
+}
+}
+
